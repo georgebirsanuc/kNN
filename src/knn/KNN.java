@@ -148,4 +148,13 @@ public class KNN {
         return classification;
     }
 
+    public String getClassification(Point newPoint) {
+        String classification = "";
+
+        points.add(newPoint);
+        classification = getClassification(points.size() - 1);
+
+        return classification;
+    }
+
 }

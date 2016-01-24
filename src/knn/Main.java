@@ -20,7 +20,11 @@ public class Main {
         knn.setPoints(dataLoader.loadDatasetFromCsv("knn_test_data.csv", ","));
         knn.setK(1);
 
-        System.out.println(knn.getClassification(7));
+        List<Double> coordinates = new ArrayList();
+        coordinates.add(1.5); coordinates.add(2.0);
+        Point newPoint = new Point();
+        newPoint.setCoordinates(coordinates);
+        System.out.println(knn.getClassification(newPoint));
     }
 
     private static List<Point> initData() {
