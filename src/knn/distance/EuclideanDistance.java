@@ -5,9 +5,8 @@ import java.util.List;
 /**
  * Created by virgil on 23.01.2016.
  */
-public class EuclideanDistance implements Distance {
+public class EuclideanDistance {
 
-    @Override
     public Double calculate(List<Double> firstCoordinates, List<Double> secondCoordinates) {
         double distance = 0;
 

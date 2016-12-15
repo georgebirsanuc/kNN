@@ -1,6 +1,6 @@
 package knn;
 
-import knn.distance.Distance;
+import knn.distance.EuclideanDistance;
 import knn.utils.Point;
 import knn.utils.Pair;
 
@@ -13,9 +13,10 @@ public class KNN {
 
     private List<Point> points;
     private int k;
-    private Distance distance;
+    private EuclideanDistance distance;
 
-    private Map<Integer, List<Pair<Integer, Double>>> allDistances; //Point index and the list of neighbours + the distances
+    //Point index and the list of neighbours + the distances
+    private Map<Integer, List<Pair<Integer, Double>>> allDistances;
 
     public KNN(List<Point> points, int k) {
         this.points = points;
@@ -47,11 +48,11 @@ public class KNN {
         this.k = k;
     }
 
-    public Distance getDistance() {
+    public EuclideanDistance getDistance() {
         return distance;
     }
 
-    public void setDistance(Distance distance) {
+    public void setDistance(EuclideanDistance distance) {
         this.distance = distance;
     }
 

@@ -1,7 +1,5 @@
 package knn.utils;
 
-import java.util.Comparator;
-
 /**
  * Created by virgil on 23.01.2016.
  */
